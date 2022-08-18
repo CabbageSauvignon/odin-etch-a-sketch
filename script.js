@@ -1,5 +1,4 @@
 const container = document.getElementById('container');
-console.log(container);
 let gridDimension = 16;
 let gridSize = 300;
 let cellSize = gridSize/gridDimension;
@@ -14,6 +13,18 @@ for (let i=0; i<gridDimension; i++) {
             newCell.setAttribute('style',`height:${cellSize}px; width:${cellSize}px`)
             newRow.appendChild(newCell);
         }
-    console.log(newRow);
     container.appendChild(newRow);
 }
+
+
+const gridCells = document.querySelectorAll('.cell');
+gridCells.forEach(cell => cell.addEventListener('mouseenter', changeGridCells));
+
+
+function changeGridCells (e) {
+    const cellToChange = e.target;
+    console.log(cellToChange);
+    cellToChange.classList.add('black-cell')
+}
+
+
