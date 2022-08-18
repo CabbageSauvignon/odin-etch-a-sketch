@@ -1,0 +1,33 @@
+body {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridUnit {
+    box-sizing: border-box;
+    display: flex;
+    flex:auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.row {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.cell {
+    border-style: solid;
+    border-color: lightgrey;
+    background-color: black;
+}
+
+#container {
+    
+    display: inline-block;
+    margin:auto;
+    background-color: white;
+    border-style: solid;
+}
